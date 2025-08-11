@@ -6,7 +6,6 @@ optional_dep = [
     'pyrender',
     'kapture',
     'kapture-localization',
-    'numpy-quaternion',
     'pycolmap',
     'poselib'
 ]
