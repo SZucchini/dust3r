@@ -1,14 +1,11 @@
 # Copyright (C) 2025-present Naver Corporation. All rights reserved.
+import os
 from setuptools import setup, find_packages
 
-curope_dep = ['curope @ git+https://github.com/naver/croco.git@croco_module#egg=curope&subdirectory=curope']
+curope_dep = ['curope @ git+https://github.com/naver/croco.git@croco_module#subdirectory=curope']
 optional_dep = [
     'pillow-heif',
     'pyrender',
-    'kapture',
-    'kapture-localization',
-    'pycolmap',
-    'poselib'
 ]
 
 setup(
