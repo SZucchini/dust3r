@@ -13,9 +13,10 @@ import os.path as path
 HERE_PATH = path.normpath(path.dirname(__file__))
 CROCO_REPO_PATH = path.normpath(path.join(HERE_PATH, '../../croco'))
 CROCO_MODELS_PATH = path.join(CROCO_REPO_PATH, 'models')
+CROCO_INIT_PATH = path.join(CROCO_REPO_PATH, '__init__.py')
 
 # check the presence of models directory in repo to be sure its cloned
-if path.isdir(CROCO_MODELS_PATH):  # croco is a submodule (main branch)
+if path.isdir(CROCO_MODELS_PATH) and not path.isfile(CROCO_INIT_PATH):  # croco is a submodule (main branch)
     # workaround for sibling import
     sys.path.insert(0, CROCO_REPO_PATH)
 
