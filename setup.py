@@ -1,3 +1,4 @@
+# Copyright (C) 2025-present Naver Corporation. All rights reserved.
 from setuptools import setup, find_packages
 
 curope_dep = ['curope @ git+https://github.com/naver/croco.git@croco_module#egg=curope&subdirectory=curope']
