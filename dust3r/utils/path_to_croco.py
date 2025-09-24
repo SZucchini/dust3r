@@ -32,3 +32,11 @@ else:
     except ImportError as e:
         raise ImportError(f"croco is not initialized, could not find: {CROCO_MODELS_PATH}.\n "
                           "Did you forget to run 'git submodule update --init --recursive' ?")
+
+# patch curope submodule when installed
+try:
+    import curope  # curope installed
+    import models.curope
+    models.curope.cuRoPE2D = curope.cuRoPE2D
+except Exception as e:
+    pass
